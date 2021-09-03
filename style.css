@@ -1,0 +1,135 @@
+#calculator {
+    width: 375px;
+    height: 450px;
+    border: 10px solid black;
+    margin: auto;
+    display: grid;
+    grid-template-columns: [first] 25% [second] 25% [third] 25% [fourth] 25% [fifth];
+    grid-template-rows: [firstRow] 28% [secondRow] 18% [thirdRow] 18% [fourthRow] 18% [fifthRow] 18% [sixth];
+}
+
+#display {
+    grid-column-start: first;
+    grid-column-end: fifth;
+    grid-row-start: firstRow;
+    grid-row-end: secondRow;
+    background-color: rgb(142, 197, 230);
+    display: grid;
+    grid-template-rows: [firstLine] 50% [secondLine] 50% [thirdLine];
+}
+
+#results {
+    justify-self: end;
+    align-self: end;
+    font-size: 40px;
+}
+
+#numbers {
+    justify-self: end;
+    font-size: 25px;
+}
+
+#button-7 {
+    grid-column-start: first;
+    grid-column-end: second;
+    grid-row-start: secondRow;
+    grid-row-end: thirdRow;
+}
+
+#button-4 {
+    grid-column-start: first;
+    grid-column-end: second;
+    grid-row-start: thirdRow;
+    grid-row-end: fourthRow;
+}
+
+#button-1 {
+    grid-column-start: first;
+    grid-column-end: second;
+    grid-row-start: fourthRow;
+    grid-row-end: fifthRow;
+}
+
+#button-2 {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: fourthRow;
+    grid-row-end: fifthRow;
+}
+
+#button-3 {
+    grid-column-start: third;
+    grid-column-end: fourth;
+    grid-row-start: fourthRow;
+    grid-row-end: fifthRow;
+}
+
+#button-5 {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: thirdRow;
+    grid-row-end: fourthRow;
+}
+
+#button-6 {
+    grid-column-start: third;
+    grid-column-end: fourth;
+    grid-row-start: thirdRow;
+    grid-row-end: fourthRow;
+}
+
+#button-8 {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: secondRow;
+    grid-row-end: thirdRow;
+}
+
+#button-9 {
+    grid-column-start: third;
+    grid-column-end: fourth;
+    grid-row-start: secondRow;
+    grid-row-end: thirdRow;
+}
+
+#button-0 {
+    grid-column-start: first;
+    grid-column-end: second;
+    grid-row-start: fifthRow;
+    grid-row-end: sixthRow;
+}
+
+#multiply {
+    grid-column-start: fourth;
+    grid-column-end: fifth;
+    grid-row-start: secondRow;
+    grid-row-end: thirdRow;
+}
+
+#divide {
+    grid-column-start: fourth;
+    grid-column-end: fifth;
+    grid-row-start: thirdRow;
+    grid-row-end: fourthRow;
+}
+
+#subtract {
+    grid-column-start: fourth;
+    grid-column-end: fifth;
+    grid-row-start: fourthRow;
+    grid-row-end: fifthRow;
+}
+
+#add {
+    grid-column-start: fourth;
+    grid-column-end: fifth;
+    grid-row-start: fifthRow;
+    grid-row-end: sixthRow;
+}
+
+#clear {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: fifthRow;
+    grid-row-end: sixthRow;
+}
