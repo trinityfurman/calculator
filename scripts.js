@@ -15,8 +15,8 @@ function divide(a, b) {
 }
 
 function operate(operator, a, b) {
-    a = parseInt(a);
-    b = parseInt(b);
+    a = parseFloat(a);
+    b = parseFloat(b);
     if (operator == 'add') {
         return(add(a, b));
     } else if (operator == 'subtract') {
@@ -34,14 +34,13 @@ function displayValues (values) {
     displayNums.textContent = values;
 }
 
-// Populate display's text content with values that user clicks on
-// if operator button is clicked, erase array 
+
 let firstNum = 0;
 let numberString = " ";
 let operator = "";
 let results = 0;
 
-// Works fine
+
 const buttons = document.querySelectorAll(".number");
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -50,7 +49,7 @@ buttons.forEach((button) => {
     });
 });
 
-// Works fine
+
 const clear = document.querySelector("#clear");
 clear.addEventListener('click', () => {
     numberString = "";
@@ -92,5 +91,12 @@ equals.addEventListener('click', () => {
     operator = "equals";
 });
 
-// function to check if numbers have been entered when button is clicked?
+const decimal = document.querySelector("#decimal");
+decimal.addEventListener('click', () => {
+    if (numberString.includes('.') == false) {
+        numberString = numberString.concat('.');
+    }
+});
+
+
 
