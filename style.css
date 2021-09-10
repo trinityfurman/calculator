@@ -1,11 +1,18 @@
+body {
+    background-color: #DED9E3;
+    font-family: 'Nunito', sans-serif;
+   
+}
+
 #calculator {
-    width: 375px;
+    width: 350px;
     height: 450px;
-    border: 10px solid black;
+    border: 3px solid black;
+    border-radius: 8px;
     margin: auto;
     display: grid;
     grid-template-columns: [first] 25% [second] 25% [third] 25% [fourth] 25% [fifth];
-    grid-template-rows: [firstRow] 28% [secondRow] 18% [thirdRow] 18% [fourthRow] 18% [fifthRow] 18% [sixth];
+    grid-template-rows: [firstRow] 20% [secondRow] 16% [thirdRow] 16% [fourthRow] 16% [fifthRow] 16% [sixthRow] 16% [seventhRow];
 }
 
 #display {
@@ -13,90 +20,112 @@
     grid-column-end: fifth;
     grid-row-start: firstRow;
     grid-row-end: secondRow;
-    background-color: rgb(142, 197, 230);
+    background-color: #E5EFEE;
     display: grid;
-    grid-template-rows: [firstLine] 50% [secondLine] 50% [thirdLine];
+    grid-template-rows: [firstLine] 30% [secondLine] 70% [thirdLine];
+}
+button {
+    font-size: 22px;
+    font-family: 'Nunito', sans-serif;
+    font-weight:bold;
+    border: 1px black solid;
+}
+
+button:hover {
+    filter: brightness(95%);
 }
 
 #results {
     justify-self: end;
     align-self: end;
     font-size: 40px;
+    grid-row-start: secondLine;
+    grid-row-end: thirdLine;
 }
 
-#numbers {
-    justify-self: end;
-    font-size: 25px;
+
+.number {
+    background-color: #D3CDE1;
+    ;
 }
 
-#button-7 {
-    grid-column-start: first;
-    grid-column-end: second;
-    grid-row-start: secondRow;
-    grid-row-end: thirdRow;
+.operator {
+    /*background-color:#B7D7E2;*/
+    background-color: #BACEB5;
 }
 
-#button-4 {
+.top {
+    background-color: #B5B2D0;
+}
+
+[id = '7'] {
     grid-column-start: first;
     grid-column-end: second;
     grid-row-start: thirdRow;
     grid-row-end: fourthRow;
 }
 
-#button-1 {
+[id = '4'] {
     grid-column-start: first;
     grid-column-end: second;
     grid-row-start: fourthRow;
     grid-row-end: fifthRow;
 }
 
-#button-2 {
-    grid-column-start: second;
-    grid-column-end: third;
-    grid-row-start: fourthRow;
-    grid-row-end: fifthRow;
-}
-
-#button-3 {
-    grid-column-start: third;
-    grid-column-end: fourth;
-    grid-row-start: fourthRow;
-    grid-row-end: fifthRow;
-}
-
-#button-5 {
-    grid-column-start: second;
-    grid-column-end: third;
-    grid-row-start: thirdRow;
-    grid-row-end: fourthRow;
-}
-
-#button-6 {
-    grid-column-start: third;
-    grid-column-end: fourth;
-    grid-row-start: thirdRow;
-    grid-row-end: fourthRow;
-}
-
-#button-8 {
-    grid-column-start: second;
-    grid-column-end: third;
-    grid-row-start: secondRow;
-    grid-row-end: thirdRow;
-}
-
-#button-9 {
-    grid-column-start: third;
-    grid-column-end: fourth;
-    grid-row-start: secondRow;
-    grid-row-end: thirdRow;
-}
-
-#button-0 {
+[id = '1'] {
     grid-column-start: first;
     grid-column-end: second;
     grid-row-start: fifthRow;
     grid-row-end: sixthRow;
+}
+
+[id = '2'] {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: fifthRow;
+    grid-row-end: sixthRow;
+}
+
+[id = '3'] {
+    grid-column-start: third;
+    grid-column-end: fourth;
+    grid-row-start: fifthRow;
+    grid-row-end: sixthRow;
+}
+
+[id = '5'] {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: fourthRow;
+    grid-row-end: fifthRow;
+}
+
+[id = '6'] {
+    grid-column-start: third;
+    grid-column-end: fourth;
+    grid-row-start: fourthRow;
+    grid-row-end: fifthRow;
+}
+
+[id = '8'] {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: thirdRow;
+    grid-row-end: fourthRow;
+}
+
+[id = '9'] {
+    grid-column-start: third;
+    grid-column-end: fourth;
+    grid-row-start: thirdRow;
+    grid-row-end: fourthRow;
+}
+
+[id = '0'] {
+    grid-column-start: first;
+    grid-column-end: third;
+    grid-row-start: sixthRow;
+    grid-row-end: seventhRow;
 }
 
 #multiply {
@@ -128,8 +157,39 @@
 }
 
 #clear {
+    grid-column-start: first;
+    grid-column-end: second;
+    grid-row-start: secondRow;
+    grid-row-end: thirdRow;
+}
+
+#equals {
+    grid-column-start: fourth;
+    grid-column-end: fifth;
+    grid-row-start: sixthRow;
+    grid-row-end: seventhRow;
+    background-color: #BACEB5;
+}
+
+#decimal {
+    grid-column-start: third;
+    grid-column-end: fourth;
+    grid-row-start: sixthRow;
+    grid-row-end: seventhRow;
+    background-color: #D3CDE1;
+}
+
+#backspace {
     grid-column-start: second;
     grid-column-end: third;
-    grid-row-start: fifthRow;
-    grid-row-end: sixthRow;
+    grid-row-start: secondRow;
+    grid-row-end: thirdRow;
 }
+
+#sign {
+    grid-column-start: third;
+    grid-column-end: fourth;
+    grid-row-start: secondRow;
+    grid-row-end: thirdRow;
+}
+
